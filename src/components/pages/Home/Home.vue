@@ -73,6 +73,7 @@ export default {
 <style scoped>
 .home-wrapper >>> h3 {
   text-align: center;
+  margin-top: 16px;
 }
 .todos-wrapper {
   margin-top: 16px;

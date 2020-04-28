@@ -8,7 +8,7 @@ Vue.use(VueI18n);
 
 const langs = [
   {
-    name: 'Turkce',
+    name: 'Türkçe',
     locale: 'tr',
   },
   {
@@ -19,6 +19,9 @@ const langs = [
 
 const messages = {
   en: {
+    darkTheme: 'Dark theme',
+    lightTheme: 'Light theme',
+
     common: {
       username: 'username',
     },
@@ -34,7 +37,7 @@ const messages = {
       username: 'User Name',
       password: 'Password',
       buttonText: 'Login',
-      loginError: 'Username or Password incorrect',
+      loginError: 'Username or password incorrect.',
       emptyFieldError: 'Username and password cannot be empty',
     },
     home: {
@@ -55,20 +58,21 @@ const messages = {
   },
 
   tr: {
+    darkTheme: 'Koyu tema',
+    lightTheme: 'Açık tema',
     common: {
-      username: 'kullanici adi',
+      username: 'kullanıcı adı',
     },
     header: {
       navbar: {
-        login: 'Giris Yap',
-        home: 'Ana Sayfa',
-        logout: 'Cikis Yap',
+        login: 'Giriş Yap',
+        logout: 'Cıkış Yap',
       },
     },
     home: {
       filter: {
         active: 'Aktif',
-        completed: 'Tamamlanmis',
+        completed: 'Tamamlanmış',
         all: 'Hepsi',
       },
       todosTitle: "Todo'lar",
@@ -76,17 +80,17 @@ const messages = {
       addTodo: {
         buttonText: 'Ekle',
         title: 'Yeni Todo Ekle',
-        titleInputLabel: 'Baslik',
-        descriptionInputLabel: 'Aciklama',
+        titleInputLabel: 'Başlık',
+        descriptionInputLabel: 'Açıklama',
       },
     },
     login: {
-      title: 'Giris Yap',
-      username: 'Kullanici Adi',
-      password: 'Sifre',
-      buttonText: 'Giris yap',
-      loginError: 'Kullanici adi yada sifre gecersiz',
-      emptyFieldError: 'Kullanici adi ve sifre bos olamaz',
+      title: 'Giriş Sayfası',
+      username: 'Kullanıcı Adı',
+      password: 'Şifre',
+      buttonText: 'Giriş yap',
+      loginError: 'Kullanıcı adı yada şifre geçersiz',
+      emptyFieldError: 'Kullanıcı adı ve şifre boş olamaz',
     },
   },
 };

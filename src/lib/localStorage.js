@@ -31,11 +31,13 @@ class LocalStorage {
 const userLocalStorage = new LocalStorage('User');
 const langLocalStorage = new LocalStorage('Lang', 'tr');
 const todoLocalStorage = new LocalStorage('Todos', []);
+const themeLocalStorage = new LocalStorage('Theme', 'light');
 
 const LocalStorages = {
   userLocalStorage,
   langLocalStorage,
   todoLocalStorage,
+  themeLocalStorage,
 };
 
 export default LocalStorages;

@@ -11,7 +11,7 @@ import VueDropdown from 'vue-dropdowns';
 
 import Input from './components/common/Input';
 import Button from './components/common/Button';
-import TrashIcon from './components/common/TrashIcon';
+import Icon from './components/common/Icon';
 
 import 'vue-toast-notification/dist/theme-default.css';
 
@@ -26,7 +26,7 @@ Vue.prototype.$apiService = ApiService;
 Vue.component('VInput', Input);
 Vue.component('VButton', Button);
 Vue.component('VDropdown', VueDropdown);
-Vue.component('VTrashIcon', TrashIcon);
+Vue.component('VIcon', Icon);
 
 router.beforeEach((to, from, next) => {
   const user = userLocalStorage.getItem();

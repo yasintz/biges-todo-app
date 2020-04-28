@@ -5,7 +5,12 @@ import i18n from './i18n';
 
 Vue.use(Vuex);
 
-const { userLocalStorage, langLocalStorage, todoLocalStorage } = LocalStorages;
+const {
+  userLocalStorage,
+  langLocalStorage,
+  todoLocalStorage,
+  themeLocalStorage,
+} = LocalStorages;
 
 const store = new Vuex.Store({
   state: {
@@ -14,8 +19,12 @@ const store = new Vuex.Store({
     todos: todoLocalStorage.getItem(),
     visibility: 'all',
     searchText: '',
+    theme: themeLocalStorage.getItem(),
   },
   getters: {
+    theme(state) {
+      return state.theme;
+    },
     isLoggedIn(state) {
       return Boolean(state.user);
     },
@@ -41,12 +50,13 @@ const store = new Vuex.Store({
               }
               return todo.completed;
             });
+      const searchText = state.searchText.toLowerCase();
 
-      return state.searchText
+      return searchText
         ? filterResult.filter(
             (todo) =>
-              todo.title.indexOf(state.searchText) > -1 ||
-              todo.description.indexOf(state.searchText) > -1
+              todo.title.toLowerCase().indexOf(searchText) > -1 ||
+              todo.description.toLowerCase().indexOf(searchText) > -1
           )
         : filterResult;
     },
@@ -54,6 +64,9 @@ const store = new Vuex.Store({
   mutations: {
     setUser(state, user) {
       state.user = user;
+    },
+    setTheme(state, theme) {
+      state.theme = theme;
     },
     setSelectedLang(state, lang) {
       state.selectedLang = lang;
@@ -69,6 +82,11 @@ const store = new Vuex.Store({
     },
   },
   actions: {
+    setTheme({ commit }, theme) {
+      themeLocalStorage.setItem(theme);
+      commit('setTheme', theme);
+    },
+
     setVisibility({ commit }, visibility) {
       commit('setVisibility', visibility);
     },

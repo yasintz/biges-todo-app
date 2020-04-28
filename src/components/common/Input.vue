@@ -80,8 +80,8 @@ export default {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: var(--input-background-color);
   background-clip: padding-box;
   border: 1px solid var(--vue-green-color);
   border-radius: 0.25rem;
@@ -99,5 +99,19 @@ export default {
 }
 textarea.v-input {
   resize: vertical;
+}
+.v-input::placeholder {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.v-input:-ms-input-placeholder {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.v-input::-ms-input-placeholder {
+  color: var(--text-color);
+  opacity: 0.8;
 }
 </style>

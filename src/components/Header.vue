@@ -1,9 +1,18 @@
 <template>
   <div class="header">
     <div>
-      <a v-if="isLoggedIn" @click="logout" href="#">{{
-        $t('header.navbar.logout')
-      }}</a>
+      <VButton
+        :text="$t('header.navbar.logout')"
+        color="outline"
+        class="logout-btn"
+        v-if="isLoggedIn"
+        @click="logout"
+      />
+      <VButton
+        :text="theme == 'dark' ? $t('lightTheme') : $t('darkTheme')"
+        @click="setTheme(theme == 'dark' ? 'light' : 'dark')"
+        color="outline"
+      />
     </div>
     <VDropdown
       :options="$i18n.langs"
@@ -19,15 +28,14 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapGetters(['isLoggedIn', 'selectedLang']),
+    ...mapGetters(['isLoggedIn', 'selectedLang', 'theme']),
   },
   methods: {
-    ...mapActions(['setSelectedLang', 'setUser']),
+    ...mapActions(['setSelectedLang', 'setUser', 'setTheme']),
     onChangeLang(data) {
       this.setSelectedLang(data.locale);
     },
-    logout(event) {
-      event.preventDefault();
+    logout() {
       this.setUser(undefined);
       this.$router.push({ name: 'Login' });
     },
@@ -40,9 +48,18 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 450px) {
+  .header {
+    flex-direction: row;
+  }
 }
 
 .header a {
   color: var(--vue-green-color);
+}
+.logout-btn {
+  margin-right: 8px;
 }
 </style>

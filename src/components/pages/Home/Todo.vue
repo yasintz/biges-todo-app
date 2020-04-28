@@ -15,7 +15,7 @@
         {{ todo.description }}
       </p>
     </div>
-    <VTrashIcon class="trash-icon" @click="onTrashClick" />
+    <VIcon icon="trash" class="trash-icon" @click="onTrashClick" />
   </div>
 </template>
 
@@ -52,13 +52,15 @@ export default {
 }
 
 .todo-wrapper .content {
-  padding-left: 48px;
+  padding: 0 48px;
 }
 .todo-wrapper h4 {
   margin: 0;
+  word-break: break-word;
 }
 .todo-wrapper p {
   margin: 4px 0 0 8px;
+  word-break: break-word;
 }
 .todo-wrapper .trash-icon {
   position: absolute;

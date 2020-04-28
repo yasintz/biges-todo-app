@@ -74,7 +74,8 @@ export default {
 
 <style scoped>
 .login-container {
-  width: 32%;
+  max-width: 300px;
+  width: 100%;
   margin: auto;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <h3>{{ $t('home.addTodo.title') }}</h3>
     <form @submit="handleSubmit">
       <VInput :label="$t('home.addTodo.titleInputLabel')" v-model="title" />
@@ -47,5 +47,8 @@ export default {
 <style scoped>
 .add-button {
   width: 100%;
+}
+.wrapper {
+  margin-bottom: 24px;
 }
 </style>
