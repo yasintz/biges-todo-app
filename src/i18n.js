@@ -34,7 +34,7 @@ const messages = {
       username: 'User Name',
       password: 'Password',
       buttonText: 'Login',
-      errorToast: 'Username or Password incorrect',
+      loginError: 'Username or Password incorrect',
       emptyFieldError: 'Username and password cannot be empty',
     },
     home: {

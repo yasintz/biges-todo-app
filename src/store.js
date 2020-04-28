@@ -46,7 +46,7 @@ const store = new Vuex.Store({
         ? filterResult.filter(
             (todo) =>
               todo.title.indexOf(state.searchText) > -1 ||
-              todo.title.indexOf(state.searchText) > -1
+              todo.description.indexOf(state.searchText) > -1
           )
         : filterResult;
     },
