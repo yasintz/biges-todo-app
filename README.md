@@ -30,6 +30,7 @@ yarn serve
 - Filter
 - i18n
 - Responsive
+- Dark Theme
 
 ## Login
 
