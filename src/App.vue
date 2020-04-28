@@ -1,21 +1,17 @@
 <template>
   <div id="app">
-    <ul class="sidebar">
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/login">Login</router-link>
-      </li>
-    </ul>
-    <router-view />
+    <Header />
+    <div class="page-container">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
+import Header from "./components/Header";
 export default {
   name: "App",
-  components: {}
+  components: { Header }
 };
 </script>
 
@@ -33,23 +29,29 @@ html {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 24px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.sidebar {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+@media (min-width: 768px) {
+  #app {
+    width: 750px;
+  }
 }
-.sidebar li {
-  margin: 0 10px;
-  display: inline-block;
+@media (min-width: 992px) {
+  #app {
+    width: 970px;
+  }
 }
-.sidebar li a {
-  color: var(--vue-green-color);
+@media (min-width: 1200px) {
+  #app {
+    width: 1170px;
+  }
 }
+
 .page-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 .page-title {
   text-align: center;
