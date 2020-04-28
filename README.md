@@ -12,6 +12,8 @@
 
 ### ✨ [Demo](https://biges-todo-app.now.sh/)
 
+![app-_1_](https://user-images.githubusercontent.com/36041339/80530552-d7b62580-89a1-11ea-9171-5e7b56b79b3e.gif)
+
 ## Install
 
 ```sh
