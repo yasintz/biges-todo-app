@@ -112,8 +112,12 @@ const store = new Vuex.Store({
 
     addNewTodo({ dispatch, state }, todo) {
       dispatch('setTodos', [
+        {
+          ...todo,
+          id: state.todos.length,
+          completed: false,
+        },
         ...state.todos,
-        { ...todo, id: state.todos.length, completed: false },
       ]);
     },
 
