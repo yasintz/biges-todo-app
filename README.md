@@ -31,6 +31,13 @@ yarn serve
 - i18n
 - Responsive
 
+## Login
+
+```
+  username: yasintz or biges
+  password: 12345
+```
+
 ## Author
 
 👤 **Yasin Tazeoglu**

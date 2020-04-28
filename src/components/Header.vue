@@ -1,6 +1,10 @@
 <template>
   <div class="header">
-    <a @click="logout" href="#">{{ $t('header.navbar.logout') }}</a>
+    <div>
+      <a v-if="isLoggedIn" @click="logout" href="#">{{
+        $t('header.navbar.logout')
+      }}</a>
+    </div>
     <VDropdown
       :options="$i18n.langs"
       :selected="selectedLang"
