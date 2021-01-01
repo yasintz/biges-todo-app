@@ -8,7 +8,7 @@
 
 > Simple Todo App
 
-### ✨ [Demo](https://biges-todo-app.now.sh/)
+### ✨ [Demo](https://biges-todo-app.vercel.app/)
 
 ![Biges-Todo-App-_1_](https://user-images.githubusercontent.com/36041339/80533239-f9b1a700-89a5-11ea-8387-d579689d0dae.gif)
 
